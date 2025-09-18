@@ -27,19 +27,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
                 jFmtCPF, jFmtDataNascimento, jPwdSenha, jCboNivel,
                 jChbAtivo, jBtnConfirmar, jBtnCancelar);
 
-    }
-
-    public void limpar() {
-        JtxtNome.setText("");
-        JtxtApelido.setText("");
-        jFmtIdUsuario.setText("");
-        jFmtCPF.setText("");
-        jFmtDataNascimento.setText("");
-        jCboNivel.setSelectedIndex(-1);
-        jChbAtivo.setText("");
-
-    }
-
+    } 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -288,7 +276,9 @@ public class JDlgUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-       //add a tela
+       java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
+        JDlgPesquisarUsuarios telaPesquisa = new JDlgPesquisarUsuarios((java.awt.Frame) parentWindow, true);
+        telaPesquisa.setVisible(true); //add a tela
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed

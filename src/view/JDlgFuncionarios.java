@@ -27,18 +27,6 @@ public class JDlgFuncionarios extends javax.swing.JDialog {
                 jChbAtivo, jBtnConfirmar, jBtnCancelar, jChbAtivoF);
     }
 
-    public void limpar() {
-        JtxtNome.setText("");
-        JtxtEmail.setText("");
-        jFmtIdfuncionario.setText("");
-        jFmtCPF.setText("");
-        jFmtDataNascimento.setText("");
-        jCboCargo.setSelectedIndex(-1);
-        jChbAtivoF.setText("");
-        jChbCLT.setText("");
-
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -307,7 +295,9 @@ public class JDlgFuncionarios extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-        //add a tela
+        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
+        JDlgPesquisarFuncionarios telaPesquisa = new JDlgPesquisarFuncionarios((java.awt.Frame) parentWindow, true);
+        telaPesquisa.setVisible(true);  //add a tela
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void JbtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnExcluirActionPerformed
@@ -334,7 +324,7 @@ public class JDlgFuncionarios extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
-         UtilFuncionario.habilitar(true, jFmtIdfuncionario, JtxtNome, JtxtEmail,
+        UtilFuncionario.habilitar(true, jFmtIdfuncionario, JtxtNome, JtxtEmail,
                 jFmtCPF, jFmtDataNascimento, jChbCLT, jCboCargo,
                 jChbAtivo, jBtnConfirmar, jBtnCancelar, jChbAtivoF);
 

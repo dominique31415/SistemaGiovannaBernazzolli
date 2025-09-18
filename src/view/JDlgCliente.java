@@ -29,26 +29,6 @@ public class JDlgCliente extends javax.swing.JDialog {
 
     }
 
-    public void limpar() {
-        JtxtCidade.setText("");
-        JtxtCurso.setText("");
-        JtxtEmail.setText("");
-        JtxtEscolaridade.setText("");
-        JtxtNome.setText("");
-        JtxtNomeRua.setText("");
-        JtxtNumeroCasa.setText("");
-        JtxtNumeroCelular.setText("");
-        jCboSexo.setSelectedItem(false); //Se usa setSelectedItem porque é vomboBox
-        jChbAtivo.setSelected(false);
-        jFmtRG.setText("");
-        jFmtDataNascimento.setText("");
-        JtxtBairro.setText("");
-        jFmtCEP.setText("");
-        jFmtCPF.setText("");;
-        jFmtIdCliente.setText("");
-
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -461,7 +441,9 @@ public class JDlgCliente extends javax.swing.JDialog {
     }//GEN-LAST:event_JtxtCursoActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-        //adda a tela
+        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
+        JDlgPesquisarCliente telaPesquisa = new JDlgPesquisarCliente((java.awt.Frame) parentWindow, true);
+        telaPesquisa.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
@@ -474,7 +456,7 @@ public class JDlgCliente extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
-      JOptionPane.showConfirmDialog(null, "Deseja continuar Alterar algum dado?", "Confirmação", JOptionPane.YES_NO_CANCEL_OPTION);
+        JOptionPane.showConfirmDialog(null, "Deseja continuar Alterar algum dado?", "Confirmação", JOptionPane.YES_NO_CANCEL_OPTION);
         UtilUsuarios.habilitar(false, jFmtIdCliente, JtxtNome, JtxtBairro,
                 jFmtCPF, jFmtRG, jFmtDataNascimento, JtxtEmail, jFmtCEP,
                 JtxtNumeroCasa, JtxtNomeRua, JtxtCidade, JtxtNumeroCelular, JtxtEscolaridade, JtxtCurso, jCboSexo,
@@ -484,7 +466,7 @@ public class JDlgCliente extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
-          int cod = UtilClientes.strToInt(jFmtIdCliente.getText());
+        int cod = UtilClientes.strToInt(jFmtIdCliente.getText());
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
@@ -502,7 +484,7 @@ public class JDlgCliente extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jbtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnExcluirActionPerformed
-             UtilClientes.pergunta("Desja excluir??");
+        UtilClientes.pergunta("Desja excluir??");
 
     }//GEN-LAST:event_jbtnExcluirActionPerformed
 

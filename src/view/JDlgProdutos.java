@@ -24,19 +24,8 @@ public class JDlgProdutos extends javax.swing.JDialog {
         setTitle("gdcb_produtos");
         setLocationRelativeTo(null);
         UtilProdutos.habilitar(false, jFmtIdProduto, JFmtPreco, JtxtNome, JtxtMarca,
-                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar);
+                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar, JtxtAutorLivro);
 
-    }
-
-    public void limpar() {
-        JtxtNome.setText("");
-        JtxtAutorLivro.setText("");
-        jFmtIdCliente.setText("");
-        JtxtClassificacaoIdade.setText("");
-        JtxtMarca.setText("");
-        JFmtPreco.setText("");
-        jCboTipoL.setSelectedIndex(-1);
-        jCboPopularidade.setSelectedIndex(-1);
     }
 
     /**
@@ -335,22 +324,24 @@ public class JDlgProdutos extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         UtilProdutos.habilitar(false, jFmtIdProduto, JFmtPreco, JtxtNome, JtxtMarca,
-                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar);
+                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar, JtxtAutorLivro);
 
         UtilProdutos.habilitar(true, jBtnIncluir, jBtnAlterar, jbtnExcluir, jBtnPesquisar);
         UtilProdutos.limpar(jFmtIdProduto, JFmtPreco, JtxtNome, JtxtMarca,
-                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar); // TODO add your handling code here:
+                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar, JtxtAutorLivro); // TODO add your handling code here:
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-// TODO add your handling code here:
+        java.awt.Window parentWindow = javax.swing.SwingUtilities.getWindowAncestor(this);
+        JDlgPesquisarProdutos telaPesquisa = new JDlgPesquisarProdutos((java.awt.Frame) parentWindow, true);
+        telaPesquisa.setVisible(true);  //add a tela// TODO add your handling code here:
         //add tela
 
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         UtilProdutos.habilitar(true, jFmtIdProduto, JFmtPreco, JtxtNome, JtxtMarca,
-                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar);
+                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar, JtxtAutorLivro);
 
         UtilProdutos.habilitar(false, jBtnIncluir, jBtnAlterar, jbtnExcluir, jBtnPesquisar);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
@@ -364,14 +355,14 @@ public class JDlgProdutos extends javax.swing.JDialog {
 
         JOptionPane.showConfirmDialog(null, "Deseja continuar Alterar algum dado?", "Confirmação", JOptionPane.YES_NO_CANCEL_OPTION);
         UtilProdutos.habilitar(false, jFmtIdProduto, JFmtPreco, JtxtNome, JtxtMarca,
-                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar);
+                JtxtClassificacaoIdade, jCboTipoL, jCboPopularidade, jBtnConfirmar, jBtnCancelar, JtxtAutorLivro);
 
         UtilProdutos.habilitar(true, jBtnIncluir, jBtnAlterar, jbtnExcluir, jBtnPesquisar);
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         int cod = UtilProdutos.strToInt(jFmtIdProduto.getText());
-        limpar();// TODO add your handling code here:
+
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void JFmtPrecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JFmtPrecoActionPerformed
