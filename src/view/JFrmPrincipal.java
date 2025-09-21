@@ -22,9 +22,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         getContentPane().setBackground(Color.black);
 
-        JDlgLogin telaLogin = new JDlgLogin(this, true);
-        telaLogin.setVisible(true);
-        telaLogin.dispose();
     }
 
     /**
@@ -47,9 +44,7 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jMnuClientes = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMnuProdutos = new javax.swing.JMenuItem();
-        jMnuSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMnuVendas = new javax.swing.JMenuItem();
         jMnuSair1 = new javax.swing.JMenuItem();
 
         jMenu3.setText("File");
@@ -124,34 +119,12 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMnuProdutos);
 
-        jMnuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMnuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/saair.JPG"))); // NOI18N
-        jMnuSair.setMnemonic('s');
-        jMnuSair.setText("Sair");
-        jMnuSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMnuSairActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMnuSair);
-
         jMenuBar1.add(jMenu1);
         jMenu1.getAccessibleContext().setAccessibleDescription("");
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/movimento.JPG"))); // NOI18N
         jMenu2.setMnemonic('m');
         jMenu2.setText("Movimentos");
-
-        jMnuVendas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
-        jMnuVendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/es.JPG"))); // NOI18N
-        jMnuVendas.setMnemonic('v');
-        jMnuVendas.setText("Vendas");
-        jMnuVendas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMnuVendasActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMnuVendas);
 
         jMnuSair1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         jMnuSair1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/saair.JPG"))); // NOI18N
@@ -192,10 +165,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         telaUsuarios.setVisible(true); // TODO add your handling code here:
     }//GEN-LAST:event_jMnuUsuariosActionPerformed
 
-    private void jMnuVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuVendasActionPerformed
-              // TODO add your handling code here:
-    }//GEN-LAST:event_jMnuVendasActionPerformed
-
     private void jMnuUsuariosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMnuUsuariosKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMnuUsuariosKeyPressed
@@ -213,10 +182,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         JDlgFuncionarios telaFuncionarios = new JDlgFuncionarios(this, true);
         telaFuncionarios.setVisible(true);        // TO        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSairActionPerformed
-        System.exit(0); // TODO add your handling code here:
-    }//GEN-LAST:event_jMnuSairActionPerformed
 
     private void jMnuSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSair1ActionPerformed
         System.exit(0); // TODO add your handling code here:
@@ -268,10 +233,8 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMnuClientes;
     private javax.swing.JMenuItem jMnuProdutos;
-    private javax.swing.JMenuItem jMnuSair;
     private javax.swing.JMenuItem jMnuSair1;
     private javax.swing.JMenuItem jMnuUsuarios;
-    private javax.swing.JMenuItem jMnuVendas;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
